@@ -1,7 +1,7 @@
 # Use an official Python runtime as the base image and slim means a smaller image
 FROM python:3.9-slim
 
-# Set the working directory in the container
+# Set the working directory in the container which is /app for our application where all code will copyed.
 WORKDIR /app
 
 # install required packages for system

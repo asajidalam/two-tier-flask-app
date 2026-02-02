@@ -68,6 +68,37 @@ Before you begin, make sure you have the following installed:
    - Visit http://localhost to see the frontend. You can submit new messages using the form.
    - Visit http://localhost:5000/insert_sql to insert a message directly into the `messages` table via an SQL query.
 
+5. verrfing that out messages are going to database or not.
+   - see the list of container.
+      ```bash
+      docker ps
+      ```
+
+   - copy the mysql container id.
+   - go to inside the mysql container.
+      ```bash
+      docker exex -it <your container id that you have copied> bash
+      ```
+
+   - login to your mysql server.
+      ```bash
+      mysql -u <give you username like root> -p <give your password like password>
+      ```
+
+   - see you database by running the command mysql>
+      ```sql
+      show databases
+      ```
+   - here you will see the database named devops in which all the message is stored to see that
+      ```sql
+      use <your database name hare it is devops>
+      ```
+   - to see the information inside the devops databases of mysql.
+      ```sql
+      select * from messages;
+      ```
+   - here the name of tables inside the devops databes is messages.
+
 ## Cleaning Up
 
 To stop and remove the Docker containers, press `Ctrl+C` in the terminal where the containers are running, or use the following command:
