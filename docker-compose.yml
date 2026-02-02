@@ -32,7 +32,7 @@ services:
       MYSQL_USER: root
       MYSQL_PASSWORD: root
       MYSQL_DB: devops
-    depends_on:
+    depends_on:       # Ensure mysql starts before flask-app
       - mysql
     networks:
       - twotier
