@@ -1,3 +1,4 @@
+# makefile means automation of building and running the application.
 # Determine the operating system
 OS := $(shell uname)
 
